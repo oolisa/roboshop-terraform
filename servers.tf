@@ -77,7 +77,7 @@ resource "aws_instance" "redis" {
 
 resource "aws_route53_record" "redis" {
   zone_id = "Z09004132V61FXNKE13MY"
-  name    = "frontend-dev.otdynamic.online"
+  name    = "redis-dev.otdynamic.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.redis.private_ip]
